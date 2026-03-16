@@ -14,9 +14,14 @@ function App() {
     setLoading(true);
     setError(null);
     try {
-      const response = await fetch('http://localhost:5000/classify', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+      const API_BASE =
+        window.location.hostname === "localhost"
+          ? "http://localhost:5000"
+          : "http://16.171.141.176:5000";
+
+      const response = await fetch(`${API_BASE}/classify`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ text: note }),
       });
 
