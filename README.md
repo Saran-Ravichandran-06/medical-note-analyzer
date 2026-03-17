@@ -1,4 +1,4 @@
-# Medical Note Classifier
+# MedNote
 
 A modern web application for intelligent classification of medical notes using Natural Language Processing (NLP) techniques. This tool helps healthcare professionals categorize clinical notes into predefined medical specialties with confidence scores.
 
